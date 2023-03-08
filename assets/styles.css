@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*  brukes sammen med var(--col1) for lett å hente riktig farge
+    enten dette eller lage mange .classes i css/htm */
+:root {
+    --col1:#0e1217;
+    --col2:#355070;
+    --col3:#6d597a;
+    --col4:#b56576;
+    --col5:#e56b6f;
+    --col6:#eaac8b;
+}
+
+#bonfire {
+    background-color: #0e1217;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 11;
+}
+
+#bonfire img {
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+body {
+    min-width: 200px;
+    background-color: var(--col1);
+    font-family: 'Roboto', sans-serif;
+    /* overflow-y: scroll; stops width:100% from bugging when overflowing */
+
+}
+
+h1, h2, h3 {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+h1 {
+    color: #DD6031;
+}
+
+h2 {
+    color: #0B6E4F;
+}
+
+h3 {
+    color: #EF5B5B;
+}
+
+h4 {
+    color: #4A7B9D;
+}
+
+h6 {
+    color:#666;
+}
+
+p {
+    color: #D7D7D7;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 31px;
+}
+
+.pbg {
+    background-color: #e1e1e1;
+    color: #AA22FF;
+    border: 1px aliceblue;
+    border-radius: 2px;
+    padding: 2px 5px;
+}
+/* ---------------------------------------------------------- Start of header styling ---------------------------------------------------------- */
+header {
+    background-color: var(--col1);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    transition: top 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    box-shadow: 0px 2px 5px var(--col1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+#nav-left {
+    display: flex;
+
+}
+nav li{
+    list-style: none;
+    display: inline;
+}
+
+nav li a {
+    color: #DD6031;
+    font-family: 'Kanit', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 50px;
+    margin-left: 20px;
+    font-size: 2em;
+}
+
+#navbar-logo {
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    float: left;
+}
+/* hack to avoid having to resize and crop the gif */
+#navbar-logo img {
+    width: 200px;
+    margin-left: -75px;
+    margin-top: -70px;
+}
+#searchbox input,
+#searchbox button {
+    color: var(--col6);
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    background: none;
+    text-align: center;
+}
+#searchbox input:focus {
+    outline: none;
+    background-color: #171e26;
+    color: antiquewhite;
+}
+
+#navbar-small a {
+    color: var(--col6);
+    font-family: 'Kanit', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 50px;
+    margin-left: 20px;
+    font-size: 2em;
+    padding-right: 30px;
+}
+
+@media (max-width: 900px) {
+    #nav-left ul, #nav-right {
+        display: none;
+        transition: opacity 2s ease-out;
+        opacity: 0;
+    }
+}
+@media (min-width: 900px) {
+    #navbar-small {
+        display: none;
+        transition: opacity 2s ease-out;
+        opacity: 0;
+    }
+}
+
+/* ---------------------------------------------------------- Start of main styling ---------------------------------------------------------- */
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--col1);
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 60px;
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+.full {
+    width: 100%;
+}
+.maxw {
+    max-width: 1200px;
+}
+
+#content::after {
+    clear: both;
+}
+
+.crow {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.crow ul {
+    list-style: circle;
+    margin: 10px 0 10px 20px;
+}
+
+.cimg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.cimg img {
+    max-width: 80%;
+    border-radius: 10px;
+}
+
+.ccol {
+
+}
+
+.ccoll {
+    position: sticky;
+    max-width: 250px;
+    top: 50px;
+    min-height: 100px;
+    margin-right: 40px;
+}
+
+.ccolr {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    min-height: 100px;
+}
+
+/* ---------------------------------------------------------- Start of footer styling ---------------------------------------------------------- */
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#footer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    margin-bottom: 50px;
+    background-image: url(media/footerbg2.avif);
+    background-size: cover;
+}
+#footer a{
+    color: #DD6031;
+    font-family: 'Kanit', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2em;
+    margin: 10px;
+}
+#footer img{
+    position: absolute;
+    max-width: 800px;
+    min-width: 200px;
+    width: 100%;
+}
+#footer-left{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+#footer-right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+/* ---------------------------------------------------------- Start of parallax styling ---------------------------------------------------------- */
+.parallax {
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666;
+    height: 100%;
+    margin-top: -10px;
+}
+
+.pimg1 {
+    background-image: url(media/parallax1.avif);
+    min-height: 100vh;
+}
+.pimg2 {
+    background-image: url(media/parallax2.avif);
+    min-height: 100vh;
+}
+.pimg3 {
+    background-image: url(media/parallax3.avif);
+    min-height: 100vh;
+}
+
+.pimg4 {
+    background-image: url(media/parallax4.avif);
+    min-height: 100vh;
+}
+
+.pimg1, .pimg2, .pimg3, .pimg4 {
+    position: relative;
+    opacity: 0.7;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.section {
+    text-align: center;
+    padding: 50px 80px;
+    background-color: var(--col1);
+    color: #ddd
+}
+
+.ptext {
+    position: absolute;
+    top: calc(50% - 100px);
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.ptext .border {
+    background-color: var(--col1);
+    color: #fff;
+    padding: 20px;
+}
+
+.text .border .trans {
+    background-color: transparent;
+}
+
+@media (max-width:568px){
+    .pimg1, .pimg2, .pimg3 {
+        background-attachment:scroll;
+    }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pitch</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+    <script src="assets/script.js"></script>
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+          if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+          } else {
+            document.getElementById("navbar").style.top = "-50px";
+          }
+          prevScrollpos = currentScrollPos;
+        }
+    </script>
+</head>
+<body class="">
+    <header id="navbar">
+        <nav>
+            <div id="nav-left">
+                <div id="navbar-logo">
+                    <a href="index.htm"><img src="assets/media/bonfire.gif" alt="an animated cozy little bonfire"></a>
+                </div>
+                <ul>
+                    <li><a href="code.htm">code</a></li>
+                    <li><a href="snippets.htm">snippets</a></li>
+                    <li><a href="contact.htm">Contact</a></li>
+                </ul>
+            </div>
+            <div id="nav-right">
+                <ul>
+                    <li>
+                        <form id="searchbox" action="">
+                            <input type="search" name="search" id="" placeholder="Search Box"><button>🔍</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            <div id="navbar-small">
+                <div class="dropdown"><a href="">Menu</a></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="content">
+            <div class="maxw">
+                <div class="crow">
+                    <div style="margin-top: 100px;" class="ccol">
+                        <div class="cimg">
+                            <img style="" src="assets/media/vscode.png" alt="picture of me working in visual studio code">
+                        </div>
+                        <h3>Creating my first web page</h3>
+                        <h4>March 9, 2023</h4>
+                        <p>After learning about html & css from our teacher I've been tasked to put together a website to show of some of the teqniques and skills i've learned soo far in this course.</p>
+                    </div>
+                </div>
+                <div class="crow">
+                    <div style="margin-top: 100px;" class="ccol">
+                        <img src="assets/media/person-walk.gif" style="mix-blend-mode: multiply;" alt="">
+                        <h1>Test header for awesome people</h1>
+                        <h2>Test header for awesome people</h2>
+                        <h3>Test header for awesome people</h3>
+                        <h4>Test header for awesome people</h4>
+                        <h5>Test header for awesome people</h5>
+                        <h6>Test header for awesome people</h6>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi veniam officia libero praesentium perspiciatis incidunt itaque fuga est eligendi culpa et, consequatur architecto impedit a voluptate minus amet accusamus ipsam perferendis, cum blanditiis velit facilis dolor rerum! Nisi odio similique iusto cupiditate saepe ipsum amet aliquam. Quis consequuntur non natus enim fugit dolorem at dignissimos, voluptas consectetur temporibus accusantium explicabo reprehenderit maxime, voluptatibus neque officiis in aliquam sed ab dicta libero hic aut rerum. Nisi cupiditate, odio porro explicabo voluptatibus quisquam magnam illum similique sed, nemo maiores quaerat reiciendis exercitationem fuga cumque at? Repellendus dignissimos perferendis consequatur. Quis, quos nihil!</p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </main>
+    <footer>
+        <div id="footer">
+            <div id="footer-left">
+                <a href="">github</a>
+                <a href="">codepen</a>
+                <a href="">stackoverflow</a>
+            </div>
+            <div id="footer-right">
+                <a href="">twitter</a>
+                <a href="">contact</a>
+            </div>
+        </div>
+        <!-- <div id="bonfire">
+            <img src="assets/media/bonfire.gif" alt="Click to continue">
+        </div> -->
+    </footer>
+</body>
+</html>
