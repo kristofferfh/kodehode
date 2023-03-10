@@ -1,9 +1,9 @@
 // Includes sub-pages //
 $(function() {
-    var $menu = $('#nav-left'),
+    var $menu = $('.dropdown'),
         $target = $('#content');
 
-    $menu.on('click', '> ul li a', function(event) {
+    $menu.on('click', '> a', function(event) {
         var $this = $(this);
         event.preventDefault();
         $target.load($this.attr('href'));
