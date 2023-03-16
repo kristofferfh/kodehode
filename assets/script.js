@@ -3,7 +3,7 @@ $(function() {
     var $menu = $('.dropdown'),
         $target = $('#content');
 
-    $menu.on('click', '> a', function(event) {
+    $menu.on('click', 'a', function(event) {
         var $this = $(this);
         event.preventDefault();
         $target.load($this.attr('href'));
