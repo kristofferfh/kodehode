@@ -50,7 +50,7 @@ $(window).on("load",function() {
       }
     })
   }, {
-    threshold: 0.8,
+    threshold: 0.5,
   })
 
   hiddenElements.forEach((el) => observer.observe(el));
