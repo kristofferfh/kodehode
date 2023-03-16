@@ -13,6 +13,9 @@
     --col4:#b56576;
     --col5:#e56b6f;
     --col6:#eaac8b;
+    --col7: #623CEA;
+    --bg-color: #0e1217;
+    --card-color: rgb(23, 23, 23);
 }
 
 #bonfire {
@@ -56,10 +59,10 @@ h2 {
     color: #0B6E4F;
 }
 
-h3 {
+/* h3 {
     color: #EF5B5B;
 }
-
+ */
 h4 {
     color: #4A7B9D;
 }
@@ -82,6 +85,7 @@ p {
     border-radius: 2px;
     padding: 2px 5px;
 }
+
 /* ---------------------------------------------------------- Start of header styling ---------------------------------------------------------- */
 header {
     background-color: var(--col1);
@@ -120,20 +124,6 @@ nav li{
 
 /* --------------------------------------------------------------------------- */
 
-/* .navbar a:hover, .dropdown:hover .dropbtn {
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
-}
-
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-  }
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-  }
-} */
 .navbar a:hover, .dropdown:hover .dropbtn {
     text-shadow: #DD6031 1px 0 10px;
     margin-left: 10px;
@@ -158,7 +148,9 @@ nav li{
     position: absolute;
     width: 100%;
     left: 0;
-    z-index: 1;
+    z-index: 2;
+    box-shadow: 0px 10px 10px var(--col1);
+    border-bottom: 2px solid var(--col2);
 }
 
 .dd-justify {
@@ -167,12 +159,19 @@ nav li{
     justify-content: space-between;
     margin: 0 auto;
     padding: 20px 0;
-    box-shadow: 0px 2px 5px var(--col1);
 }
 
 .dd-group {
     display: flex;
     flex-direction: column;
+}
+
+.dd-group a {
+    color: whitesmoke;
+}
+
+.dd-group a:hover {
+    background-color: #ffffff23;
 }
 
 .dropdown:hover .dd-content {
@@ -249,6 +248,7 @@ main {
 }
 .maxw {
     max-width: 1200px;
+    width: 100%;
 }
 
 #content::after {
@@ -296,6 +296,74 @@ main {
     max-width: 700px;
     min-height: 100px;
 }
+/* ------------------------------------- News --------------------------------------- */
+.cnews {
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px;
+}
+
+.cnewsc {
+    overflow: hidden;
+    position: relative;
+    margin-top: -100px;
+    height: 400px;
+    width: 800px;
+    min-width: 500px;
+    border-radius: 10px;
+    border: 3px solid #171e26;
+    background-color: var(--col1);
+}
+
+.cnewsc:nth-child(even) {
+    align-self: end;
+}
+
+.cnewsc:nth-child(even) .cnewst{
+    right: 2%;
+}
+.cnewsc:nth-child(odd) .cnewst{
+    left: 2%;
+}
+
+.cnewsc:hover {
+    box-shadow: 0 0 5px 5px #171e26;
+}
+
+.cnewst {
+    color: white;
+    font-weight: bold;
+    border: 3px solid #171e26;
+    background-color: #0e1217f6;
+    position: absolute;
+    bottom: 2%;
+    max-width: 75%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cnewsi {
+    position: absolute;
+    min-height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.cnewsi img {
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+    transform: scale(1.1);
+    transition: all .1s ease-in-out;
+    
+}
+
+.cnewsi img:hover {
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    transform: scale(1.12);
+    opacity: 0.5;
+}
 
 /* ---------------------------------------------------------- Start of footer styling ---------------------------------------------------------- */
 footer {
@@ -337,76 +405,4 @@ footer {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-}
-
-/* ---------------------------------------------------------- Start of parallax styling ---------------------------------------------------------- */
-.parallax {
-    font-size: 16px;
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    line-height: 1.8em;
-    color: #666;
-    height: 100%;
-    margin-top: -10px;
-}
-
-.pimg1 {
-    background-image: url(media/parallax1.jpg);
-    min-height: 100vh;
-}
-.pimg2 {
-    background-image: url(media/parallax2.jpg);
-    min-height: 100vh;
-}
-.pimg3 {
-    background-image: url(media/parallax3.jpg);
-    min-height: 100vh;
-}
-
-.pimg4 {
-    background-image: url(media/parallax4.jpg);
-    min-height: 100vh;
-}
-
-.pimg1, .pimg2, .pimg3, .pimg4 {
-    position: relative;
-    opacity: 0.7;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-.section {
-    text-align: center;
-    padding: 50px 80px;
-    background-color: var(--col1);
-    color: #ddd
-}
-
-.ptext {
-    position: absolute;
-    top: calc(50% - 100px);
-    width: 100%;
-    text-align: center;
-    color: #000;
-    font-size: 27px;
-    letter-spacing: 8px;
-    text-transform: uppercase;
-}
-
-.ptext .border {
-    background-color: var(--col1);
-    color: #fff;
-    padding: 20px;
-}
-
-.text .border .trans {
-    background-color: transparent;
-}
-
-@media (max-width:568px){
-    .pimg1, .pimg2, .pimg3 {
-        background-attachment:scroll;
-    }
 }
