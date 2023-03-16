@@ -19,6 +19,13 @@ window.onload = function() {
     });
   };
 
+// Random color for H3 headers (wip)
+/* window.onload = function() {
+  var colors = ['#ff0000', '#00ff00', '#0000ff'];
+  var random_color = colors[Math.floor(Math.random() * colors.length)];
+  document.getElementsByTagName()('h3').style.color = random_color;
+}; */
+
 // When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
@@ -29,4 +36,4 @@ window.onscroll = function() {
     document.getElementById("navbar").style.top = "-50px";
   }
   prevScrollpos = currentScrollPos;
-} 
+}
