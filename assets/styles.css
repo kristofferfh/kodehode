@@ -8,6 +8,7 @@
     enten dette eller lage mange .classes i css/htm */
 :root {
     --col1:#0e1217;
+    --col11: #131316;
     --col2:#355070;
     --col3:#6d597a;
     --col4:#b56576;
@@ -16,6 +17,18 @@
     --col7: #623CEA;
     --bg-color: #0e1217;
     --card-color: rgb(23, 23, 23);
+    --cbg1: #0e1217;
+    --cpurple: #623CEA;
+    --corange: #DD6031;
+    --cwhite: #FFFFFC;
+    --ckhaki: #BEB7A4;
+    --caqua: #00FDDC;
+    --cpink: #F7ACCF;
+    --ccarrebian: #0F7173;
+    --cblue: #3777FF;
+    --cblue2: #008DD5;
+    --clime: #51CB20;
+    --cmorray: #880044;
 }
 
 #bonfire {
@@ -52,7 +65,7 @@ h1, h2, h3 {
     margin: 10px 0;
 }
 
-h1 {
+h1, h3 {
     color: #DD6031;
 }
 
@@ -75,7 +88,7 @@ h6 {
 p {
     color: #D7D7D7;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 31px;
 }
 
@@ -298,17 +311,6 @@ main {
     min-height: 100px;
 }
 /* ------------------------------------- News --------------------------------------- */
-.hidden {
-    opacity: 0;
-    filter: blur(5px);
-    transition: all 1s;
-}
-
-.show {
-    opacity: 1;
-    filter: blur(0);
-}
-
 .cnews {
     display: flex;
     flex-direction: column;
@@ -342,11 +344,24 @@ main {
     box-shadow: 0 0 5px 5px #171e26;
 }
 
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 1s;
+    transform: translateX(-20%);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
 .cnewst {
     color: white;
     font-weight: bold;
-    border: 3px solid #171e26;
-    background-color: #0e1217f6;
+    border: 3px solid var(--corange);
+    background-color: var(--cbg1);
     position: absolute;
     bottom: 2%;
     max-width: 75%;
