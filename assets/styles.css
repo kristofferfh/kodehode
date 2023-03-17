@@ -138,7 +138,7 @@ nav li{
 
 /* --------------------------------------------------------------------------- */
 .dropbtn {
-    color: #DD6031;
+    color: var(--corange);
     font-family: 'Kanit', sans-serif;
     text-decoration: none;
     text-transform: uppercase;
@@ -148,21 +148,36 @@ nav li{
     transition: margin 0.2s ease-out;
 }
 
+.dropbtn::before {
+    /* Pseudo elements are inline by default and inline elements can't be transformed */
+    display: inline-block;
+    content: '>';
+    color: var(--corange);
+    opacity: 0.4;
+    transform: rotate(0deg);
+    transition: transform 0.2s ease-out;
+}
+
 .dropbtn:hover {
     text-shadow: #DD6031 1px 0 10px;
     margin-left: 10px;
     margin-right: 10px;
 }
 
+.dropbtn:hover::before {
+    transform: rotate(90deg);
+    opacity: 1;
+}
+
 .dd-content {
     visibility: hidden;
-    background-color: var(--col1);
     opacity: 0;
-    transition: visibility 0s, opacity 0.1s linear;
+    background-color: var(--col1);
+    /* transition: visibility 0s, opacity 0.1s linear; */
+    transition: all 0.2s ease-out;
     position: absolute;
     width: 100%;
     left: 0;
-    z-index: 2;
     box-shadow: 0px 10px 10px var(--col1);
     border-bottom: 2px solid var(--col2);
 }

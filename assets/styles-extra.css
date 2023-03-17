@@ -81,6 +81,7 @@
   background-color: var(--col1);
 }
 
+/* https://css-tricks.com/fancy-image-decorations-single-element-magic/ */
 .stext  {
   max-width: 1200px;
   --s: 10px; /* control the size */
