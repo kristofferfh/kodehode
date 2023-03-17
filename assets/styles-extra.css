@@ -1,67 +1,102 @@
 /* ---------------------------------------------------------- Start of parallax styling ---------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+
 .parallax {
-    font-size: 16px;
+    height: 100%;
+    min-width: 500px;
+    font-size: 18px;
     font-family: "Lato", sans-serif;
     font-weight: 400;
     line-height: 1.8em;
-    color: #666;
-    height: 100%;
     margin-top: -10px;
 }
 
 .pimg1 {
-    background-image: url(media/parallax1.jpg);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('media/parallax1.jpg');
     min-height: 100vh;
 }
 .pimg2 {
-    background-image: url(media/parallax2.jpg);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('media/parallax2.jpg');
     min-height: 100vh;
 }
 .pimg3 {
-    background-image: url(media/parallax3.jpg);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('media/parallax3.jpg');
     min-height: 100vh;
 }
 
 .pimg4 {
-    background-image: url(media/parallax4.jpg);
+    background-image: url('media/parallax4.jpg');
     min-height: 100vh;
 }
 
 .pimg1, .pimg2, .pimg3, .pimg4 {
     position: relative;
-    opacity: 0.7;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
-.section {
-    text-align: center;
-    padding: 50px 80px;
-    background-color: var(--col1);
-    color: #ddd
+.pbox {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: calc(50% - 100px);
+  width: 100%;
 }
 
 .ptext {
-    position: absolute;
-    top: calc(50% - 100px);
-    width: 100%;
-    text-align: center;
-    color: #000;
-    font-size: 27px;
-    letter-spacing: 8px;
-    text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--col1);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 50px #ddd;
+  background-color: #ddd;
+  opacity: 0.8;
+  
 }
 
-.ptext .border {
-    background-color: var(--col1);
-    color: #fff;
-    padding: 20px;
+.ptext h5 {
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 4em;
+  letter-spacing: 8px;
+  line-height: 1em;
 }
 
-.text .border .trans {
-    background-color: transparent;
+.ptext h6 {
+
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+  padding: 50px 80px;
+  background-color: var(--col1);
+}
+
+.stext  {
+  max-width: 1200px;
+  --s: 10px; /* control the size */
+  padding: var(--s);
+  border: calc(2*var(--s)) solid #0000;
+  outline: 1px solid #ddd;
+  outline-offset: calc(-1*var(--s));
+  background: conic-gradient(from 90deg at 1px 1px,#0000 25%, #ddd 0);
+}
+
+.stext p {
+  color: #D7D7D7;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: 1px;
 }
 
 @media (max-width:568px){
