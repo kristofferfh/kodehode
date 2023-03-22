@@ -152,8 +152,9 @@ nav li{
     /* Pseudo elements are inline by default and inline elements can't be transformed */
     display: inline-block;
     content: '>';
+    margin-right: 5px;
     color: var(--corange);
-    opacity: 0.4;
+    opacity: 0;
     transform: rotate(0deg);
     transition: transform 0.2s ease-out;
 }
@@ -407,11 +408,33 @@ main {
     opacity: 0.5;
 }
 
+code {
+    word-wrap: normal;
+    background: ;
+    color: #bfc7d5;
+    font-family: Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;
+    font-size: 1em;
+    -webkit-hyphens: none;
+    hyphens: none;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    text-align: left;
+    text-shadow: 0 1px #fff;
+    white-space: pre;
+    word-break: normal;
+    word-spacing: normal;
+}
+
 /* ---------------------------------------------------------- Start of footer styling ---------------------------------------------------------- */
 footer {
     width: 100%;
     display: flex;
     justify-content: center;
+    background-image: url(media/layered-waves-haikei2.svg);
+    background-size: cover;
+    background-position: bottom;
 }
 
 #footer{
@@ -421,11 +444,9 @@ footer {
     max-width: 1200px;
     height: 500px;
     margin-bottom: 50px;
-    background-image: url(media/footerbg2.avif);
-    background-size: cover;
 }
 #footer a{
-    color: #DD6031;
+    color: var(--bg-color);
     font-family: 'Kanit', sans-serif;
     text-decoration: none;
     text-transform: uppercase;

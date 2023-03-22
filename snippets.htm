@@ -1,6 +1,25 @@
 <div class="maxw">
     <div class="crow">
         <div class="ccoll">
+            <h1>Rem vs Em</h1>
+            <p><i>In CSS rem stands for “root em”, a unit of measurement that represents the font size of the root element. This means that 1rem equals the font size of the html element, which for most browsers has a default value of 16px. Using rem can help ensure consistency of font size and spacing throughout your UI.</i></p>
+        </div>
+        <div class="ccolr">
+            <h2>Rem Units vs. Em Units</h2>
+            <p>The difference between rem units and em units is that em units are relative to the font size of their own element, not the root element. As such they can cascade and cause unexpected results. Let’s consider the following example, where we want lists to have a font size of 12px, in the case where the root font size is the default 16px:</p>
+            <code>
+                html {
+                    font-size: 100%;
+                }
+                
+                ul {
+                    font-size: 0.75em;
+                }
+            </code>
+        </div>
+    </div>
+    <div class="crow">
+        <div class="ccoll">
             <h1>HTML</h1>
             <p><i>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser</i></p>
         </div>
