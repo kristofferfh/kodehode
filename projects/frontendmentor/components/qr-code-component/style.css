@@ -1,0 +1,80 @@
+/*
+- Mobile: 375px
+- Desktop: 1440px
+*/
+:root {
+    --light:hsl(0, 0%, 100%);
+    --gray: hsl(212, 45%, 89%);
+    --blue:hsl(220, 15%, 55%);
+    --dark:hsl(218, 44%, 22%);
+    --mobile: 375px;
+    --desktop: 1440px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    justify-content: center;
+    background-color: var(--gray);
+    height: 100vh;
+    width: 100%;
+    min-width: var(--mobile);
+}
+
+.flex {
+    display: flex;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: var(--mobile);
+    margin: 0 30px;
+}
+
+.qr-item {
+    align-self: center;
+    flex-flow: wrap column;
+    background-color: var(--light);
+    padding: 15px;
+    border-radius: 20px;
+    height: fit-content;
+}
+
+.qr-img {
+
+}
+
+.qr-img img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1;
+    border-radius: 10px;
+}
+
+.qr-text {
+    margin: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+
+p {
+    color: var(--blue);
+    font-size: 1.2em;
+}
+
+.attribution {
+    font-size: 11px; text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
